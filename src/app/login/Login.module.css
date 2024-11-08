@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.submitButton {
+  margin-top: 1.5rem;
+}
+
+.link {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.confirmPasswordContainer {
+  position: relative;
+}
+
+.passwordMatchContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.passwordMatchIcon {
+  margin-left: 0.5rem;
+}
+
+.passwordMismatchMessage {
+  margin: 0;
+}
+
+.loader {
+  display: flex;
+  justify-content: center; /* Center the loader */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  font-size: 24px; /* Font size for the loader text */
+  color: #0070f3; /* Color for the loader text */
+}

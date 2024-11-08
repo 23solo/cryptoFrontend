@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+:global(body) {
+  overflow: hidden; /* Prevent scrolling on the body */
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Set height to 100% of the viewport */
+}

@@ -1,0 +1,360 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+/* src/app/styles/CryptoDashboard.module.css */
+.radioGroup {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between radio buttons */
+  margin-top: 10px; /* Space above the radio group */
+  margin-bottom: 20px;
+  margin-right: 20px; /* Space below the radio group */
+  margin-left: 20px;
+}
+
+.radioGroup label {
+  display: flex; /* Use flexbox for label layout */
+  align-items: center; /* Center align items vertically */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 5px 10px; /* Add padding for better touch targets */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.radioGroup input[type='radio'] {
+  margin-right: 8px; /* Space between radio button and label text */
+}
+
+.radioGroup label:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+.radioGroup input[type='radio']:checked + span {
+  font-weight: bold; /* Bold text for selected option */
+  color: #0070f3; /* Change text color for selected option */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.whiteIcon {
+  color: white;
+}
+
+.main {
+  flex: 1; /* Allow main to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 2rem;
+  overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+}
+.welcomeContainer {
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add space below the welcome message */
+  z-index: 10; /* Ensure it appears above other content */
+  position: relative; /* Position relative to control stacking */
+}
+
+.welcomeMessage {
+  font-size: 24px; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #ff5722; /* Change text color to highlight */
+  padding: 10px; /* Add padding for better appearance */
+  border: 2px solid #ff5722; /* Optional: Add a border */
+  border-radius: 5px; /* Optional: Rounded corners */
+  background-color: rgba(
+    255,
+    87,
+    34,
+    0.1
+  ); /* Optional: Light background color */
+}
+.banner {
+  width: 100%;
+  height: 50%; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 10%; /* Fill the banner area */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.categories {
+  margin-top: 2rem;
+  flex: 1; /* Allow categories to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center categories */
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%; /* Full width for grid */
+}
+
+.category {
+  text-align: center;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #eaeaea;
+  background-color: white; /* Ensure footer has a background */
+}
+.redirectButton {
+  margin-top: 20px; /* Add some space above the button */
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #0070f3; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 16px; /* Font size */
+}
+
+.redirectButton:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+/* src/app/styles/CryptoDashboard.module.css */
+.dashboardContainer {
+  max-width: 1200px; /* Limit the width of the dashboard */
+  margin: 20px auto; /* Center the dashboard */
+  padding: 20px; /* Add padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff; /* White background */
+}
+
+.title {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 24px; /* Title font size */
+  color: #333; /* Dark text color */
+}
+
+.cryptoList {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.cryptoItem {
+  padding: 10px; /* Space around each item */
+  border-bottom: 1px solid #e0e0e0; /* Light border between items */
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between item and price */
+  font-size: 18px; /* Font size for items */
+}
+
+.price {
+  font-weight: bold; /* Bold price */
+  color: #0070f3; /* Blue color for price */
+}
+
+.input {
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  flex: 1; /* Allow inputs to grow */
+  margin-right: 10px; /* Space between inputs */
+}
+
+.input:last-child {
+  margin-right: 0; /* Remove margin for the last input */
+}
+
+.submitButton {
+  padding: 10px 20px; /* Padding for button */
+  background-color: #0070f3; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submitButton:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+
+/* src/app/styles/Home.module.css */
+.loader {
+  display: flex;
+  justify-content: center; /* Center the loader */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  font-size: 24px; /* Font size for the loader text */
+  color: #0070f3; /* Color for the loader text */
+}
+/* src/app/styles/CryptoDashboard.module.css */
+.dashboardContainer {
+  width: 100%; /* Limit the width of the dashboard */
+  margin: 20px auto; /* Center the dashboard */
+  padding: 20px; /* Add padding */
+  height: 100%;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.title {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 28px; /* Title font size */
+  color: #333; /* Dark text color */
+}
+
+.cryptoGrid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+}
+.input {
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 10px; /* Space between inputs */
+  width: 100%; /* Full width */
+}
+.cryptoCard {
+  background-color: white; /* Card background color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the card */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Card shadow */
+  transition: transform 0.2s; /* Smooth transition */
+}
+
+.cryptoCard:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.cryptoImage {
+  width: 50px; /* Fixed width for images */
+  height: 50px; /* Fixed height for images */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+.cryptoName {
+  font-size: 18px; /* Font size for the name */
+  font-weight: bold; /* Bold name */
+  margin: 10px 0; /* Space above and below the name */
+}
+
+.cryptoPrice {
+  font-size: 20px; /* Font size for the price */
+  color: #0070f3; /* Blue color for price */
+}
+
+.marketCap {
+  font-size: 14px; /* Font size for market cap */
+  color: #666; /* Gray color for market cap */
+}
+
+.priceChange {
+  font-size: 14px; /* Font size for price change */
+}
+
+.green {
+  color: green; /* Green color for positive change */
+}
+
+.red {
+  color: red; /* Red color for negative change */
+}
+
+.alertForm {
+  display: flex; /* Flexbox for form layout */
+  justify-content: space-between; /* Space between inputs and button */
+  margin-top: 20px; /* Space above the form */
+}
+.alertDiv {
+  display: flex; /* Flexbox for form layout */
+  justify-content: space-between; /* Space between inputs and button */
+  margin-top: 20px; /* Space above the form */
+}
+
+.input {
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  flex: 1; /* Allow inputs to grow */
+  margin-right: 10px; /* Space between inputs */
+}
+
+.input:last-child {
+  margin-right: 0; /* Remove margin for the last input */
+}
+
+.submitButton {
+  padding: 10px 20px; /* Padding for button */
+  background-color: #0070f3; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submitButton:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+/* src/app/styles/CryptoDashboard.module.css */
+.cryptoImage {
+  width: 100%; /* Make the image take the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100px; /* Set a maximum height to prevent excessive height */
+  object-fit: contain; /* Ensure the image fits within the container without cropping */
+  margin-bottom: 10px; /* Space below the image */
+}
